@@ -53,13 +53,25 @@ Rectangle{
         onPressed: {    //鼠标左键按下事件
             clickPos = Qt.point(mouse.x, mouse.y)
         }
-        onPositionChanged: {    //鼠标位置改变
+        onPositionChanged: (mouse)=> {    //鼠标位置改变
             //计算鼠标移动的差值
             var delta = Qt.point(mouse.x - clickPos.x, mouse.y - clickPos.y)
             //设置窗口坐标
             mainWindow.setX(root.x + delta.x)
             mainWindow.setY(root.y + delta.y)
         }
+    }
+
+    IconButton {
+        iconPath: "./icons/logo.svg"
+        anchors.left: parent.left
+        anchors.top: parent.top
+        anchors.leftMargin: 10
+        anchors.topMargin: 2
+        iconColor: "#43acF2"
+        backgroundColor: Constant.titlebar_color
+        width: 29
+        height: 29
     }
 
     //关闭窗口按钮

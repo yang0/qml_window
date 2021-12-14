@@ -7,11 +7,17 @@ Button {
     property string iconHoverColor: "white"
     property string backgroundColor: Constant.framebar_color
     property string backgroundHoverColor: Constant.framebar_color
+    property int iconWidth: 30
+    property int iconHeight: 30
 
 
     id: iconButton
     highlighted: false
     flat: true
+    leftPadding: 0
+    rightPadding: 0
+    topPadding: 0
+    bottomPadding: 0
     // anchors.fill:parent
     state: "RELEASED"
     background: Rectangle{
@@ -22,8 +28,8 @@ Button {
 
     icon {
       source:  Qt.resolvedUrl(iconPath)
-      width: 30
-      height: 30
+      width: iconWidth
+      height: iconHeight
     }
 
     MouseArea { 

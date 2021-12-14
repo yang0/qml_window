@@ -1,5 +1,5 @@
 import QtQuick 2.7
- 
+
 /*
              ↑     ↑     ↑
            ←|1|   |2|   |3|→
@@ -35,7 +35,7 @@ Item
         onEntered: cursorShape = Qt.SizeFDiagCursor;
         onExited: cursorShape = Qt.ArrowCursor;
         onPressed: startPoint = Qt.point(mouseX, mouseY);
-        onPositionChanged:
+        onPositionChanged:(mouse)=> 
         {
             if(pressed)
             {
@@ -73,7 +73,7 @@ Item
         onEntered: cursorShape = Qt.SizeVerCursor;
         onExited: cursorShape = Qt.ArrowCursor;
         onPressed: startPoint = Qt.point(mouseX, mouseY);
-        onPositionChanged:
+        onPositionChanged: (mouse)=> 
         {
             if(pressed)
             {
@@ -103,7 +103,7 @@ Item
             startPoint = Qt.point(mouseX, mouseY);
             fixedPont = Qt.point(target.x, target.y)
         }
-        onPositionChanged:
+        onPositionChanged: (mouse)=>
         {
             if(pressed)
             {
@@ -139,7 +139,7 @@ Item
         {
             startPoint = Qt.point(mouseX, mouseY);
         }
-        onPositionChanged:
+        onPositionChanged: (mouse)=>
         {
             if(pressed)
             {
@@ -180,7 +180,7 @@ Item
             startPoint = Qt.point(mouseX, mouseY);
             fixedPont = Qt.point(target.x, target.y)
         }
-        onPositionChanged:
+        onPositionChanged: (mouse)=> 
         {
             if(pressed)
             {
@@ -211,7 +211,7 @@ Item
             startPoint = Qt.point(mouseX, mouseY);
             fixedPont = Qt.point(target.x, target.y)
         }
-        onPositionChanged:
+        onPositionChanged: (mouse)=> 
         {
             if (pressed)
             {
@@ -248,7 +248,7 @@ Item
             startPoint = Qt.point(mouseX, mouseY);
             fixedPont = Qt.point(target.x, target.y)
         }
-        onPositionChanged:
+        onPositionChanged: (mouse)=> 
         {
             if (pressed)
             {
@@ -278,7 +278,7 @@ Item
             startPoint = Qt.point(mouseX, mouseY);
             fixedPont = Qt.point(target.x, target.y)
         }
-        onPositionChanged:
+        onPositionChanged: (mouse)=> 
         {
             if(pressed)
             {

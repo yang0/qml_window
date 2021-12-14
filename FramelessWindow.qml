@@ -42,6 +42,8 @@ ApplicationWindow {
                 Layout.preferredWidth: 50
             }
 
+            
+
             Rectangle{
                 id: iconBar2
                 color: 'plum'
@@ -49,22 +51,21 @@ ApplicationWindow {
                 Layout.fillHeight: true
                 Layout.minimumWidth: 100
                 Layout.preferredWidth: parent.width - iconBar.width
+                MainContent{
+                }
             }
 
         }
 
-
+        transitions: Transition {
+            NumberAnimation { properties: "x,y"; easing.type: Easing.InOutQuad }
+        }
 
     }
     
-
-    
-
-
-
-
-
     ResizeBorder{
         target: root
     }
+
+    
 }
